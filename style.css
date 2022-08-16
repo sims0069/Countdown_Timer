@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 10px 10%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.timer-input {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer-input input {
+    padding: 10px;
+    flex: 1;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    outline: none;
+    transition: 500ms;
+}
+
+.timer-input input:focus {
+    border-color: blueviolet;
+}
+
+.timer-input button {
+    background-color: blueviolet;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.timer-input button:active {
+    background-color: aquamarine;
+}
+
+.timer-block {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.timer-block .timer {
+    font-size: 10vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 50px auto 20px;
+}
+
+.timer :is(.minutes, .seconds) {
+    position: relative;
+}
+
+.timer .minutes::before {
+    content: 'Minutes';
+}
+
+.timer .seconds::before {
+    content: 'Seconds';
+}
+
+.timer :is(.minutes, .seconds)::before {
+    position: absolute;
+    font-size: 14px;
+    bottom: 0px;
+    left: 50px;
+    transform: translate(-50%);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
